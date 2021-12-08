@@ -933,8 +933,12 @@ print(v2 %in% t)
 </center>
 
 > R provide the following types of decision making statements are as follows:
+ - if statement
+ - if-else statement
+ - else-if statement (nested if-else statement)
+ - switch statement
 
-### if-Statement
+### if Statement
 > The if-statement consists of the Boolean expressions followed by on eor more statements. The if statement is the simplest decision-making statement which helps us to take a decision on the basis of the condition.
 
 > The if statement is a conditional programming statement which performs the function and displays the information if it is proved true.
@@ -948,7 +952,9 @@ print(v2 %in% t)
       }
 
 #### Flow chart of if-statement:
+<center>
 <img src="https://static.javatpoint.com/tutorial/r/images/r-if-statement.png" alt="Flow chart of if-statement">
+</center>
 
 ##### Example: 
 
@@ -960,7 +966,128 @@ print(v2 %in% t)
       } 
       print('outside the if-statement')
 
-> The following will produce the following result -
+> The above code will produce the following result -
 
       [1] "inside the if-statement"
       [1] "outside the if-statement"
+
+### if-else Statement
+> In the **if** statement, the inner code is executed when the codition is true. Tje code which is outside the block will be executed whene the if condition is false.
+> There is another type of decision-making statement known as the if-else statement. An if-else statement is the if statement followed by an else statement. An if-else statement, else statement will be executed when boolean expression will false. In simple words, If a Boolean expression will have true value, then the if block gets executed otherwise, the else block will executed.
+> R programming treats any non-zero and non-null values as true, and if the value is either zero or null, then it treats them as false.
+> The basic syntax of **if-else** statement is as follows:
+
+      if (boolean_expression) {
+        // statement(s) will be executed if the boolean_expression is true
+      } else {
+        // statement(s) will be executed if the boolean_expression is false
+      }
+
+#### Flow chart of the if-else statement:
+<center>
+<img src='https://static.javatpoint.com/tutorial/r/images/r-if-else-statement.png' alt='flow chart of the if-else statement' style="background: white">
+</center>
+
+##### Example: 
+
+      x <- 5
+      y <- 4
+
+      if(x>y) {
+        print("x is greater than y")
+      } else {
+        print("y is greater than x")
+      }
+
+> The above code will produce the following result - 
+
+      [1] "x is greater than y"
+
+### else if statement (nested if-else statement)
+> This statement is also known as nested if-else statement. The if statement is followed by an optional else if .... else statement. This statement is used to various condition in a single if....else if statement. There are some key points which are necessary to keep in mind when we are using the if...else if..else statement. These points are as follows:
+
+1) **if** statement can have either zero or one **else** statement and it must come after any **else if's** statement.
+2) **if** statement can have many **else if's** statement and they come before the else statement.
+3) Once an **else if** statement succeeds, none of the remaining **else if's** or **else's** will be tested.
+
+> The basic syntax of if-else statement is as follows:
+
+      if(boolean_expression_1) {
+        // this block executes when the boolean expression 1 is true
+      } else if(boolean_expression_2) {
+        // this block executes when the boolean expression 2 is true
+      } else {
+        // this block executes when none of the above condition is true
+      }
+
+#### Flow chart of else-if statement
+<center>
+<img src='https://static.javatpoint.com/tutorial/r/images/r-else-if-statement.png' alt='Flow chart of else-if statement' style="background: white">
+</center>
+
+##### Example:
+
+      age <- readline(prompt = "Enter age: ")
+      age <- as.integer(age)
+
+      if(age<18) {
+        print("you are a child")
+      } else if(age>30) {
+        print("you are an old guy")
+      } else {
+        print("you are adult")
+      }
+
+> The above code will produce the following result - 
+
+      > source("d:\\DATA\\COLLEGE\\SEM 7\\R\\notes\\notes.r", encoding = "UTF-8")
+      Enter age: 5
+      [1] "You are child"
+      > source("d:\\DATA\\COLLEGE\\SEM 7\\R\\notes\\notes.r", encoding = "UTF-8")
+      Enter age: 25
+      [1] "You are adult"
+      > source("d:\\DATA\\COLLEGE\\SEM 7\\R\\notes\\notes.r", encoding = "UTF-8")
+      Enter age: 36
+      [1] "You are old guy"  
+
+### Switch Statement
+> A switch statement is a selection control mechanism that allows the value of an expression to change the control flow of profram execution via map and search.
+> The switch statement is used in place of long if statements which compare a variable with several integral values. It is a multi-way branch statement which provides an easy way to dispatch execution for different parts of code. This code is based on the value of the expression.
+> This statement allows a variable to be tested for equality against a list of values. A switcg statement is a little bit complicated. To understand it, we have some key points which are as follows:
+  - if expressiong type is a character string, the string is matched to the listed cases.
+  - if there is more than one matcgm the first match element is used. 
+  - No default case is avaiable
+  - if no case if matched, an unnamed case is used.
+
+> There are basically two ways in which one of the cases is selected.
+
+1) Based on Index:
+> If the cases are values like a character vector, and the expression is evaluated to a number than the expression's result is used as an index to select the case.
+
+2) Based on Matching Value:
+> When the cases have both case value and output value like ["case_1" = "value1"], then the expression value is matched against case values. If there is a match with the case, the corresponding value is output.
+
+--------------------------
+> The basic syntax of switch statement is as follows:
+
+      switch(expression, case1, case2, case3, ....)
+
+#### Flow chart of switch statement:
+<center>
+<img src='https://static.javatpoint.com/tutorial/r/images/r-switch-statement.png' alt='flow chart of switch statement'>
+</center>
+
+##### Example: 
+
+      x <- switch(
+        3, 
+        'Sanjeev',
+        'Vikas',
+        'Ratna',
+        'Niki'
+      )
+      print(x)
+
+> The above code will produce the following result - 
+
+      [1] "Ratna"
