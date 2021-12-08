@@ -1,2 +1,7 @@
-v1 <- c(1, 5, TRUE)
-print(v1)
+x <- 24
+y <- 5
+
+if (x > y) {
+  print("inside the if statement")
+}
+print("outside the if-statement")

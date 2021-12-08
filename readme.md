@@ -633,7 +633,7 @@ The simplest of the objects is the vector object and there are six datatypes of 
   </tr>
 
   <tr>
-    <td!=</td>
+    <td>!=</td>
     <td>
       Checks if each element of the first vector is unequal to the corresponding element of the second vector
     </td>
@@ -901,7 +901,7 @@ print(v2 %in% t)
 </tr>
 
 <tr>
-  <td>%i*%</td>
+  <td>%*%</td>
   <td>
     This operator is used to multiply a matrix with its transpose
   </td>
@@ -921,6 +921,46 @@ print(v2 %in% t)
     [2, ] &nbsp;  82   &nbsp;&nbsp; 117
   </td>
 </tr>
-
-
 </table>
+
+### Decision Making
+> Decision making structures require the programmer to specify one or more condition evaluated or tested by the program, along with a statement or statements to be executed if the condition is determined to be true, and optionally, other statements to be executed if the condition is determined to be false.
+
+> Following is the general form of a typical decision making structure found in most of the programming langauges.
+
+<center>
+<img src="https://www.tutorialspoint.com/r/images/r_decision_making.png" alt="general form of a typical decision making structure">
+</center>
+
+> R provide the following types of decision making statements are as follows:
+
+### if-Statement
+> The if-statement consists of the Boolean expressions followed by on eor more statements. The if statement is the simplest decision-making statement which helps us to take a decision on the basis of the condition.
+
+> The if statement is a conditional programming statement which performs the function and displays the information if it is proved true.
+
+> The block of code inside the if-statement will be executed only when the boolean expression evaluates to be true. If the statement evaluates falsem then the code which is mentioned after the condition will run.
+
+> The syntax of it-statement is R is as follows:
+
+      if(boolean_expression) {
+        // if the boolean_expression is true, then only the statement(s) will be executed
+      }
+
+#### Flow chart of if-statement:
+<img src="https://static.javatpoint.com/tutorial/r/images/r-if-statement.png" alt="Flow chart of if-statement">
+
+##### Example: 
+
+      x <- 24
+      y <- 5
+
+      if(x>y) {
+        print('inside the if-statement')
+      } 
+      print('outside the if-statement')
+
+> The following will produce the following result -
+
+      [1] "inside the if-statement"
+      [1] "outside the if-statement"
