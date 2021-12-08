@@ -443,3 +443,413 @@ The simplest of the objects is the vector object and there are six datatypes of 
 > When we execute the above code, it produces the follwing result - 
 
       character(0)
+
+### Operators
+> An operator is a asymbol that tells the compiuler to perform specifpic mathematical or logical manipulations. R language is rich in built-in operators and provides following types of operators.
+
+### Types of Operators
+> We have the following types of operators in R - Programming - 
+ - Arithmetic operators
+ - Relational operators
+ - Logical operators
+ - Assignement operators
+ - Miscellaneous operators
+
+### Arthmetic operators
+> Following tbale show th4e arithmetic operatos supported by R language. The
+
+<table>
+  <tr>
+    <th>Operator</th>
+    <th>Description</th>
+    <th>Example</th>
+  </tr>
+
+  <tr>
+    <td>+</td>
+    <td>Adds two vectors</td>
+    <td>
+      v <- c(2, 5.5, 6)
+    </br>
+      t <- c(8, 3, 4)
+    </br>
+      print(v+t)
+    </br>
+    it produces the following result - 
+    </br>
+    [1] 10.0 8.5 10.0
+    </td>
+  </tr>
+
+  <tr>
+    <td>-</td>
+    <td>Subtracts second vector from the first</td>
+    <td>
+      v <- c(2, 5.5, 6)
+    </br>
+      t <- c(8, 3, 4)
+    </br>
+      print(v-t)
+    </br>
+    it produces the following result - 
+    </br>
+    [1] -6.0 2.5 2.0
+    </td>
+  </tr>
+
+  <tr>
+    <td>/</td>
+    <td>Divide the first vector with the second</td>
+    <td>
+      v <- c(2, 5.5, 6)
+    </br>
+      t <- c(8, 3, 4)
+    </br>
+      print(v/t)
+    </br>
+    it produces the following result - 
+    </br>
+    [1] 0.250000 1.833333 1.5000000
+    </td>
+  </tr>
+
+  <tr>
+    <td>%%</td>
+    <td>
+      The result of division of first vector with second (quotient)
+    </td>
+    <td>
+      v <- c(2, 5.5, 6)
+    </br>
+      t <- c(8, 3, 4)
+    </br>
+      print(v%%t)
+    </br>
+    it produces the following result - 
+    </br>
+    [1] 0 1 1 
+    </td>
+  </tr>
+
+  <tr>
+    <td>^</td>
+    <td>
+      The first vector raised to exponent of second vector
+    </td>
+    <td>
+      v <- c(2, 5.5, 6)
+    </br>
+      t <- c(8, 3, 4)
+    </br>
+      print(v^t)
+    </br>
+    it produces the following result - 
+    </br>
+    [1] 256.000 166.75 1296.000
+    </td>
+  </tr>  
+</table>
+
+### Relation Operators
+> Following table shows the relational operators supported by R language. Each element of the first  vector is compared with the coressponding element of the second vector. The result of comparison is a Boolean value.
+
+<table>
+  <tr>
+    <th>Operator</th>
+    <th>Description</th>
+    <th>Example</th>
+  </tr>
+
+  <tr>
+    <td>></td>
+    <td>
+      Checks if each element of the first vector is greater than the corresponding element of second vector
+    </td>
+    <td>
+      v <- c(2, 5.5, 6, 9)
+    </br>
+      t <- c(8, 2.5, 14, 9)
+    </br>
+      print(v>t)
+    </br>
+    it produces the following result - 
+    </br>
+    [1] FALSE TRUE FALSE FALSE
+    </td>
+  </tr>
+
+  <tr>
+    <td><</td>
+    <td>
+      Checks if each element of the first vector is less than the coressponding element of the second vector.
+    </td>
+    <td>
+      v <- c(2, 5.5, 6, 9)
+    </br>
+      t <- c(8, 2.5, 14, 9)
+    </br>
+      print(v<t)
+    </br>
+    it produces the following result - 
+    </br>
+    [1] TRUE FALSE TRUE FALSE
+    </td>
+  </tr>
+
+  <tr>
+    <td><=</td>
+    <td>
+      Checks if each element of the first vector is less than or equal to the corresponding element of the second vector
+    </td>
+    <td>
+      v <- c(2, 5.5, 6, 9)
+    </br>
+      t <- c(8, 2.5, 14, 9)
+    </br>
+      print(v<=t)
+    </br>
+    it produces the following result - 
+    </br>
+    [1] TRUE FALSE TRUE TRUE
+    </td>
+  </tr>
+
+  <tr>
+    <td><=</td>
+    <td>
+      Checks if each element of the first vector is greater than or equal to the corresponding element of the second vector
+    </td>
+    <td>
+      v <- c(2, 5.5, 6, 9)
+    </br>
+      t <- c(8, 2.5, 14, 9)
+    </br>
+      print(v>=t)
+    </br>
+    it produces the following result - 
+    </br>
+    [1] FALSE TRUE FALSE TRUE
+    </td>
+  </tr>
+
+  <tr>
+    <td!=</td>
+    <td>
+      Checks if each element of the first vector is unequal to the corresponding element of the second vector
+    </td>
+    <td>
+      v <- c(2, 5.5, 6, 9)
+    </br>
+      t <- c(8, 2.5, 14, 9)
+    </br>
+      print(v != t)
+    </br>
+    it produces the following result - 
+    </br>
+    [1]  TRUE  TRUE  TRUE FALSE
+    </td>
+  </tr>
+</table>
+
+### Logical Operator
+> Following table shows the logical operators supported by R lanaguage. It is applicable only to vectors of type logical, numeric or complex. All numbers greater than 1 are considered as logical value TRUE.
+
+> Each element of the first vector is compared with the corresponding element of the second vector. The result of comparison is a Boolean value.
+
+<table>
+  <tr>
+    <th>Operator</th>
+    <th>Description</th>
+    <th>Example</th>
+  </tr>
+
+  <tr>
+    <td>&</td>
+    <td>
+      It is called Element-wise Logical AND operator. It combines each element of the first vector with the corresponding element of the second vector and gives a output TRUE if both elements are TRUE.
+    </td>
+    <td>
+      v <- c(3, 1. TRUE, 2+3i)
+    </br>
+      t <- c(4, 1, FALSE, 2+3i)
+    </br>
+      print(v & t)
+    </br>
+    it produces the following result - 
+    </br>
+    [1] TRUE TRUE FALSE TRUE
+    </td>
+  </tr>
+
+  <tr>
+    <td>|</td>
+    <td>
+      It is called Element-wise Logical OR operator. It combines each element of the first vecotr with corresponding element of the second vector and gives a output TRUE if one the elements is TRUE.
+    </td>
+    <td>
+      v <- c(3, 0, TRUE, 2+2i)
+    </br>
+      t <- c(4, 0, FALSE, 2+3i)
+    </br>
+      print(v | t)
+    </br>
+    it produces the following result - 
+    </br>
+    [1] TRUE FALSE TRUE TRUE
+    </td>
+  </tr>
+  
+  <tr>
+    <td>!</td>
+    <td>
+      It is called Logical NOT operator. Takes each element of the vector and gives the opposite logical value.
+    </td>
+    <td>
+      v <- c(3, 0, TRUE, 2+2i)
+    </br>
+      print(!v)
+    </br>
+    it produces the following result - 
+    </br>
+    [1] FALSE TRUE FALSE FALSE
+    </td>
+  </tr>
+</table>
+
+> The logical operator && and || considers only the first element of the vectors and give a vector of single element as output.
+
+
+<table>
+  <tr>
+    <th>Operator</th>
+    <th>Description</th>
+    <th>Example</th>
+  </tr>
+
+  <tr>
+    <td>&&</td>
+    <td>
+      It is called Logical AND operator. Takes first element of both the vectos and gives the TRUE only if both are TRUE.
+    </td>
+    <td>
+      v <- c(3, 0, TRUE, 2+2i)
+    </br>
+      t <- c(1, 3, TRUE, 2+3i)
+    </br>
+      print(v && t)
+    </br>
+    it produces the following result - 
+    </br>
+    [1] TRUE 
+    </td>
+  </tr>
+
+  <tr>
+    <td>||</td>
+    <td>
+      It is called Logical OR operator. Takes first element of both the vectors and gives the TRUE if one of them is TRUE.
+    </td>
+    <td>
+      v <- c(0, 0, TRUE, 2+2i)
+    </br>
+      t <- c(0, 3, TRUE, 2+3i)
+    </br>
+      print(v || t)
+    </br>
+    it produces the following result - 
+    </br>
+    [1] FALSE
+    </td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+### Assignment operators 
+> These operators are used to assign values to vectors.
+
+<table>
+  <tr>
+    <th>Operator</th>
+    <th>Description</th>
+    <th>Example</th>
+  </tr>
+
+  <tr>
+    <td>
+      <-
+    </br>
+    or
+    </br>
+=
+    </br>
+or
+    </br>
+<<-
+    </td>
+    <td>
+      It is called Left Assignment Operator
+    </td>
+    <td>
+v1 <- c(3,1,TRUE,2+3i)
+    </br>
+v2 <<- c(3,1,TRUE,2+3i)
+    </br>
+v3 = c(3,1,TRUE,2+3i)
+    </br>
+print(v1)
+    </br>
+print(v2)
+    </br>
+print(v3)
+    </br>
+    it produces the following result - 
+    </br>
+    [1] 3+0i 1+0i 1+0i 2+3i
+    </br>
+[1] 3+0i 1+0i 1+0i 2+3i
+    </br>
+[1] 3+0i 1+0i 1+0i 2+3i
+    </br>
+    </td>
+  </tr>
+
+  <tr>
+<td>
+      ->
+</br>
+or
+</br>
+->>
+</td>
+   <td>
+      It is called Right Assignment Operator
+    </td>
+
+  <td>
+    c(3,1,TRUE,2+3i) -> v1
+</br>
+
+c(3,1,TRUE,2+3i) ->> v2 
+</br>
+
+print(v1)
+</br>
+
+print(v2)
+</br>
+
+it produces the following result - 
+</br>
+
+  [1] 3+0i 1+0i 1+0i 2+3i
+</br>
+  [1] 3+0i 1+0i 1+0i 2+3i
+  </td>
+
+  </tr>
+</table>
