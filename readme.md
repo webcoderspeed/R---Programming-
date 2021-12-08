@@ -1091,3 +1091,119 @@ print(v2 %in% t)
 > The above code will produce the following result - 
 
       [1] "Ratna"
+
+### Loops
+> There may be a situation when you need to execute a block of code several number of times. In general, statements are executed sequentially. The first statement in a function is executed first, followed by the second, and so on.
+> Programming languages provide various control structures that allow for more complicated execution paths.
+> A loop statement allows us to execute a statement or group of statements multipe times and the following is the general form of a loop statement in most of the programming languages.
+
+<center>
+<img src='https://www.tutorialspoint.com/r/images/loop_architecture.jpg'  alt='general form a loop statement'>
+</center>
+
+> R programming language provides the following kinds of loop to handle looping requirements.
+ - repeat loop
+   - Executes a sequence of statements multiple times and abbreviates the code that manages the loop variable.
+ - while loop
+   - Repeats a statement or group of statements while a given condition is true. It tests the condition before executing the loop body.
+ - for loop
+   - Like a while statement, except that it tests the condition at the end of the loop body.
+
+### Repeat loop
+> The **repeat loop** executes the same code again and again until a stop condition is met.
+> The basic syntax for creating a repeat loop in R is -
+
+      repeat {
+        # statements
+        if (condition) {
+          break
+        }
+      }
+
+#### Flow chart of repeat loop:
+<center>
+  <img src='https://www.tutorialspoint.com/r/images/r_break_statement.jpg'  alt='Flow chart of repeat loop'>
+</center>
+
+##### Example:
+
+        v <- c('Hello', 'Speed')
+        count <- 2
+
+        repeat {
+          print(v)
+          count <- count + 1
+
+          if(count > 5) {
+            break
+          }
+        }
+
+> The above code will produce the following result - 
+
+      [1] "Hello" "Speed"
+      [1] "Hello" "Speed"
+      [1] "Hello" "Speed"
+      [1] "Hello" "Speed"
+
+### While loop
+> The **while loop** executes the same code again and again until a stop condition is met.
+> The basic syntax for creating a while loop in R - 
+
+        while (test_expression) {
+          statement
+        }
+
+#### Flow chart of while loop:
+<center>
+  <img src='https://www.tutorialspoint.com/r/images/swift_while_loop.jpg' alt='flow chart of while loop'>
+</center>
+
+> Here key point of **while** loop is that the loop might not ever run. When the condition is tested and the result is false, the loop body will be skipped and the first statement after the while loop will be executed.
+
+##### Example:
+
+      v <- c("Hello", "Speed")
+      count <- 2
+      
+      while (count < 7) {
+        print(v)
+        count <- count + 1
+      }
+
+> The above code will produce the following result -
+
+      [1] "Hello" "Speed"
+      [1] "Hello" "Speed"
+      [1] "Hello" "Speed"
+      [1] "Hello" "Speed"
+      [1] "Hello" "Speed"
+
+### For loop
+> A **for loop** is a repeation control structure that allows you to efficiently write a loop that needs to execute a specific number of times.
+> The basic syntax for creating a **for** loop statement in R is -
+
+      for (value in vector) {
+        statements
+      }
+
+#### Flow chart  of for loop:
+<center>
+<img src='https://www.tutorialspoint.com/r/images/r_for_loop.jpg' alt='flow chart of for loop'>
+</center>
+
+> R's for loops are particularly flexible in that they are not limited to integers, or even numbers in the input. We can pass character vectors, logical vectors, lists or expressions.
+
+##### Example:
+
+      v <- LETTERS[1:4]
+      for (i in v) {
+        print(i)
+      }
+
+> The above code will produce the following result - 
+
+      [1] "A"
+      [1] "B"
+      [1] "C"
+      [1] "D"
