@@ -853,3 +853,74 @@ it produces the following result -
 
   </tr>
 </table>
+
+### Micellaneous operators
+> These operators are used for specific purpose and not general mathematical or logical computation.
+
+<table>
+<tr>
+    <th>Operator</th>
+  <th>Description</th>
+  <th>Example</th>
+</tr>
+
+<tr>
+  <td>:</td>
+  <td>Colon operator. It creaye the series of numbers in sequence for a vector</td>
+  <td>
+    v <- 2:8
+  </br>
+  it produces the following result - 
+</br>
+  [1] 2 3 4 6 7 8
+  </td>
+</tr>
+
+<tr>
+  <td>%in%</td>
+  <td>
+    This operator is used to identify if an element belong to a vector.
+  </td>
+  <td>
+    v1 <- 8
+  </br>
+    v2 <- 12
+  </br>
+  t <- 1:10
+</br>
+print(v1 %in% t)
+</br>
+print(v2 %in% t)
+</br>
+  it produces the following result - 
+</br>
+  [1] TRUE
+</br>
+  [1] FALSE
+  </td>
+</tr>
+
+<tr>
+  <td>%i*%</td>
+  <td>
+    This operator is used to multiply a matrix with its transpose
+  </td>
+  <td>
+    M <- matrix( c(2, 6, 5, 1, 10, 4), nrow = 2, ncol = 3, byrow = TRUE)
+</br>
+    t <- M %*% t(M)
+</br>
+    print(t)
+</br>
+    it produces the following result -
+</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  [, 1] [, 2]
+</br>
+    [1, ]  &nbsp; 65   &nbsp;&nbsp; 82
+</br>
+    [2, ] &nbsp;  82   &nbsp;&nbsp; 117
+  </td>
+</tr>
+
+
+</table>
